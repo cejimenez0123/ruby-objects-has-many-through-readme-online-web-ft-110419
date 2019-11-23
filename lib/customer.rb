@@ -21,6 +21,7 @@ attr_accessor :meals
     customer_waiters = Meal.all.find_all{ |meal|
     meal.waiter == self.new_meal.waiter
   return meal.waiter}
+  binding.pry
     customer_waiters
     end
 
