@@ -19,7 +19,7 @@ attr_accessor :meals
   end
   def waiters
     customer_waiters = Meal.all.find_all{ |meal|
-    meal.waiter == self.new_meal.waiter
+    meal.waiter == self.meals.waiter
   return meal.waiter}
   binding.pry
     customer_waiters
