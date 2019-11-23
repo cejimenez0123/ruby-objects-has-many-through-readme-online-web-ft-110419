@@ -22,6 +22,5 @@ attr_accessor :meals
     meal.waiter == self.meals.waiter}
     customer_waiters
     end
-    
-end
 
+end
