@@ -13,6 +13,7 @@ attr_accessor :meals
   end
   def new_meal(waiter,total,tip)
   self.meals =  Meal.new(waiter,self,total,tip)
+  binding.pry
   end
   def meals
     customer_meals = Meal.all.find_all {|meal| meal.customer == self}
@@ -20,7 +21,7 @@ attr_accessor :meals
   def waiters
     customer_waiters = Meal.all.find_all{ |meal|
     meal.waiter == self.meals.waiter
-    binding.pry
+
   return meal.waiter}
 
     customer_waiters
